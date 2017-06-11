@@ -1,0 +1,181 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #0ACCF8;
+  color: #fff;
+}
+
+body > section, body > div {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, p {
+  margin-bottom: 20px;
+}
+
+#map path:not(.visible), #city path:not(.visible) {
+  fill-opacity: 0;
+}
+
+#city {
+  max-width: 1024px;
+}
+
+#city .st0 {
+  fill: #0ACCF8;
+}
+
+#city .st1 {
+  fill: none;
+  stroke: #FCFCFC;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+#city .st2 {
+  fill: #FCFCFC;
+  stroke: #FCFCFC;
+  stroke-width: 3;
+}
+
+#city .st3 {
+  fill: none;
+  stroke: #FCFCFC;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+
+#city .st4 {
+  fill: none;
+  stroke: #FCFCFC;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#city .st5 {
+  fill: #FCFCFC;
+  stroke: #FCFCFC;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#city .st6 {
+  fill: #FCFCFC;
+  stroke: #FCFCFC;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+#city .st7 {
+  fill: #FCFCFC;
+  stroke: #FCFCFC;
+}
+
+#mapWrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#map .st0 {
+  fill: #A9EDFD;
+}
+
+#map .st1 {
+  fill: none;
+  stroke: #0ACCF8;
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+}
+
+#map .st2 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+}
+
+#map .st3 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
+#map .st4 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+
+#map .st5 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #E1FF50;
+  stroke: #E1FF50;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+#map .st6 {
+  fill: none;
+  stroke: #0ACCF8;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+}
+
+#map .st7 {
+  fill: #E1FF50;
+  stroke: #E1FF50;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+#map .st8 {
+  fill: none;
+  stroke: #FEFEFE;
+  stroke-width: 15;
+  stroke-miterlimit: 10;
+}
+
+#map .st9 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #EC8370;
+}
+
+#map .st10 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #DADADA;
+}
+
+#map .st11 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #FEFEFE;
+}
+
+.copyright {
+  text-align: center;
+}
+
+/*# sourceMappingURL=vivus.css.map */
