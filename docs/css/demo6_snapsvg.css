@@ -25,7 +25,7 @@ body {
 }
 
 body {
-  background-image: linear-gradient(135deg, #f0f0f0, #dedede);
+  background-color: #f7f7f7;
 }
 
 .likeButton {
@@ -67,120 +67,120 @@ body {
 }
 
 .likeButton.clicked .explosion {
-  -webkit-animation: explosionAnime 30000ms;
-  animation: explosionAnime 30000ms;
+  -webkit-animation: explosionAnime 800ms;
+  animation: explosionAnime 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .heart {
-  -webkit-animation: heartAnime 30000ms;
-  animation: heartAnime 30000ms;
+  -webkit-animation: heartAnime 800ms;
+  animation: heartAnime 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer {
-  -webkit-animation: particles 30000ms;
-  animation: particles 30000ms;
+  -webkit-animation: particles 800ms;
+  animation: particles 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(1) {
-  -webkit-animation: particleAnimate1 30000ms;
-  animation: particleAnimate1 30000ms;
+  -webkit-animation: particleAnimate1 800ms;
+  animation: particleAnimate1 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(2) {
-  -webkit-animation: particleAnimate2 30000ms;
-  animation: particleAnimate2 30000ms;
+  -webkit-animation: particleAnimate2 800ms;
+  animation: particleAnimate2 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(3) {
-  -webkit-animation: particleAnimate3 30000ms;
-  animation: particleAnimate3 30000ms;
+  -webkit-animation: particleAnimate3 800ms;
+  animation: particleAnimate3 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(4) {
-  -webkit-animation: particleAnimate4 30000ms;
-  animation: particleAnimate4 30000ms;
+  -webkit-animation: particleAnimate4 800ms;
+  animation: particleAnimate4 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(5) {
-  -webkit-animation: particleAnimate5 30000ms;
-  animation: particleAnimate5 30000ms;
+  -webkit-animation: particleAnimate5 800ms;
+  animation: particleAnimate5 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(6) {
-  -webkit-animation: particleAnimate6 30000ms;
-  animation: particleAnimate6 30000ms;
+  -webkit-animation: particleAnimate6 800ms;
+  animation: particleAnimate6 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(7) {
-  -webkit-animation: particleAnimate7 30000ms;
-  animation: particleAnimate7 30000ms;
+  -webkit-animation: particleAnimate7 800ms;
+  animation: particleAnimate7 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(8) {
-  -webkit-animation: particleAnimate8 30000ms;
-  animation: particleAnimate8 30000ms;
+  -webkit-animation: particleAnimate8 800ms;
+  animation: particleAnimate8 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(9) {
-  -webkit-animation: particleAnimate9 30000ms;
-  animation: particleAnimate9 30000ms;
+  -webkit-animation: particleAnimate9 800ms;
+  animation: particleAnimate9 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(10) {
-  -webkit-animation: particleAnimate10 30000ms;
-  animation: particleAnimate10 30000ms;
+  -webkit-animation: particleAnimate10 800ms;
+  animation: particleAnimate10 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(11) {
-  -webkit-animation: particleAnimate11 30000ms;
-  animation: particleAnimate11 30000ms;
+  -webkit-animation: particleAnimate11 800ms;
+  animation: particleAnimate11 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(12) {
-  -webkit-animation: particleAnimate12 30000ms;
-  animation: particleAnimate12 30000ms;
+  -webkit-animation: particleAnimate12 800ms;
+  animation: particleAnimate12 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(13) {
-  -webkit-animation: particleAnimate13 30000ms;
-  animation: particleAnimate13 30000ms;
+  -webkit-animation: particleAnimate13 800ms;
+  animation: particleAnimate13 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .likeButton.clicked .particleLayer circle:nth-child(14) {
-  -webkit-animation: particleAnimate14 30000ms;
-  animation: particleAnimate14 30000ms;
+  -webkit-animation: particleAnimate14 800ms;
+  animation: particleAnimate14 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -1071,4 +1071,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=demo6_snapsvg.css.map */
