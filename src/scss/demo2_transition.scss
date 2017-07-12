@@ -4,7 +4,9 @@ body {
   background-color: #f7f7f7;
 }
 
+// アニメーションの時間
 $animateTime: 800ms;
+// パーティクルの数
 $particleNum: 14;
 
 @mixin centering {
@@ -58,7 +60,7 @@ $particleNum: 14;
     }
 
     .particleLayer {
-      animation: particles $animateTime;
+      animation: particleLayerAnime $animateTime;
       @include animationFill;
 
       @for $index from 1 through $particleNum {
@@ -71,6 +73,7 @@ $particleNum: 14;
   }
 }
 
+// 爆発のアニメーション
 @keyframes explosionAnime {
   0% {
     opacity: 0;
@@ -105,7 +108,8 @@ $particleNum: 14;
   }
 }
 
-@keyframes particles {
+// パーティクル全体のアニメーション
+@keyframes particleLayerAnime {
   0% {
     transform: translate(0, 0);
     opacity: 0;
@@ -131,6 +135,10 @@ $particleNum: 14;
   }
 }
 
+// パーティクルの個別アニメーション
+
+// 各点の移動位置
+// 1点目のx座標, 1点目のy座標, 2点目のx座標, 2点目のy座標,...と並んでいる
 $points: -16, -59,
 41, 43,
 50, -48,
@@ -149,7 +157,6 @@ $points: -16, -59,
 $pointer: 1;
 
 @for $index from 1 through $particleNum {
-
   @keyframes particleAnimate#{$index} {
     0% {
       transform: translate(0, 0);
@@ -161,35 +168,29 @@ $pointer: 1;
     80% {
       transform: translate(#{nth($points, $pointer)}px, #{nth($points, $pointer + 1)}px);
     }
-
     90% {
       transform: translate(#{nth($points, $pointer)}px, #{nth($points, $pointer + 1)}px);
     }
-
     100% {
       opacity: 1;
       transform: translate(#{nth($points, $pointer)}px, #{nth($points, $pointer + 1)}px);
     }
   }
-
   $pointer: $pointer + 2;
-
 }
 
+// ハートのアニメーション
 @keyframes heartAnime {
   0% {
     transform: scale(0);
     fill: #E2264D;
   }
-
   39% {
     transform: scale(0);
   }
-
   60% {
     transform: scale(1.2, 1.2);
   }
-
   70% {
     transform: scale(1, 1) translate(0%, -10%);
   }

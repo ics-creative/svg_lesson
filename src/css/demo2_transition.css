@@ -82,8 +82,8 @@ body {
 }
 
 .likeButton.clicked .particleLayer {
-  -webkit-animation: particles 800ms;
-  animation: particles 800ms;
+  -webkit-animation: particleLayerAnime 800ms;
+  animation: particleLayerAnime 800ms;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -254,7 +254,7 @@ body {
   }
 }
 
-@-webkit-keyframes particles {
+@-webkit-keyframes particleLayerAnime {
   0% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -280,7 +280,7 @@ body {
   }
 }
 
-@keyframes particles {
+@keyframes particleLayerAnime {
   0% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
