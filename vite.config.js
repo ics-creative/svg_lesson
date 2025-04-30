@@ -1,6 +1,7 @@
 import { resolve } from 'path';
+import { defineConfig } from "vite";
 
-export default {
+export default defineConfig({
   build: {
     outDir: resolve(__dirname, "docs"),
     rollupOptions: {
@@ -13,5 +14,6 @@ export default {
         demo_kanorealestate: resolve(__dirname, 'demo_kanorealestate.html'),
       }
     }
-  }
-};
+  },
+  base: process.env.BASE_PATH ? "/svg_lesson/" : "./",
+});
