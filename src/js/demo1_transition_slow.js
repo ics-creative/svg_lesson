@@ -1,0 +1,1 @@
+import '../scss/demo1_transition_slow.scss';
