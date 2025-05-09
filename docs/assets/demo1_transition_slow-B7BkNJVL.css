@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body {
+  background-image: linear-gradient(135deg, #8ecbe6, #e743c3);
+}
+
+.menu {
+  cursor: pointer;
+
+  .border {
+    stroke: #ffffff;
+    stroke-width: 45px;
+    stroke-linecap: round;
+    /* transition は各ファイルで定義 */
+    transform-origin: center center;
+  }
+
+  .border1 {
+    transform: translateY(-100px);
+  }
+  .border2 {
+    opacity: 1;
+  }
+  .border3 {
+    transform: translateY(100px);
+  }
+
+  &:hover {
+    .border {
+      stroke: #890a0c; /* ホバー時の色を共通ファイルで指定 */
+    }
+    .border1 {
+      transform: translateY(0px) rotate(45deg);
+    }
+    .border2 {
+      opacity: 0;
+    }
+    .border3 {
+      transform: translateY(0px) rotate(-45deg);
+    }
+  }
+}
+
+.menu .border {
+  transition: 10000ms all ease;
+}

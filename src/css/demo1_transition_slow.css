@@ -1,0 +1,5 @@
+@import "demo1_common.css";
+
+.menu {
+  --time: 5s;
+}

@@ -1,16 +1,12 @@
 {
-  "name": "kano-ts-starter",
-  "version": "1.0.0",
-  "repository": "https://ics-kano@github.com/tonkotsuboy/kano-ts-starter.git",
-  "author": "tonkotsuboy <t.kano.624@gmail.com>",
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write src"
   },
   "devDependencies": {
-    "sass": "^1.87.0",
-    "vite": "^6.3.1"
+    "prettier": "^3.5.3",
+    "vite": "6.3.5"
   }
 }

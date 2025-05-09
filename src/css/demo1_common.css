@@ -1,0 +1,43 @@
+@import "./common.css";
+
+body {
+  background-image: linear-gradient(135deg, #8ecbe6, #e743c3);
+}
+
+.menu {
+  cursor: pointer;
+
+  .border {
+    stroke: #fff;
+    stroke-width: 45px;
+    stroke-linecap: round;
+    transition: var(--time);
+    transform-origin: center center;
+  }
+
+  /* 初期位置 */
+  .border1 {
+    transform: translateY(-100px);
+  }
+  .border3 {
+    transform: translateY(100px);
+  }
+
+  &:hover {
+    .border {
+      stroke: #890a0c; /* 各ボーダーは、ホバー時に茶色に変更する */
+    }
+    /* 1本目のボーダーは、ホバー時に回転させる */
+    .border1 {
+      transform: translateY(0px) rotate(45deg);
+    }
+    /* 2本目のボーダーは、ホバー時に透明にする */
+    .border2 {
+      opacity: 0;
+    }
+    /* 3本目のボーダーは、ホバー時に回転させる */
+    .border3 {
+      transform: translateY(0px) rotate(-45deg);
+    }
+  }
+}

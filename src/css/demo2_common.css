@@ -1,0 +1,235 @@
+@import "./common.css";
+
+:root {
+  --particle-count: 14; /* パーティクルの数 */
+  --angle-jitter: 0.08turn; /* 角度のばらつき */
+  --radius-jitter: 15px; /* 半径のばらつき */
+  --radius: 200px; /* 基本となる半径 */
+  --initial-radius: 150px; /* 初期半径 */
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.likeButton {
+  cursor: pointer;
+  transform-origin: 250px 250px;
+
+  .border {
+    fill: #fff;
+  }
+  .explosion {
+    transform-origin: 250px 250px;
+    transform: scale(0.02);
+    stroke: #dd4688;
+    fill: none;
+    opacity: 0;
+    stroke-width: 1;
+  }
+
+  .particleLayer {
+    opacity: 0;
+    transform-origin: 250px 250px;
+
+    circle {
+      opacity: 0;
+      transform-origin: 250px 250px;
+    }
+  }
+
+  .heart {
+    fill: #0606063d;
+    transform: scale(0.8);
+    transform-origin: 250px 250px;
+  }
+
+  &.clicked {
+    .explosion {
+      animation: explosionAnime var(--animate-time);
+      animation-fill-mode: forwards;
+    }
+
+    .heart {
+      animation: heartAnime var(--animate-time);
+      animation-fill-mode: forwards;
+    }
+
+    .particleLayer {
+      animation: particleLayerAnime var(--animate-time);
+      animation-fill-mode: forwards;
+
+      circle {
+        animation-name: particleAnimate;
+        animation-duration: var(--animate-time);
+        animation-fill-mode: forwards;
+
+        --angle-seed: calc(mod(var(--particle-index) * 137, 360)); /* パーティクルの角度の種を計算 */
+        --radius-seed: calc(mod(var(--particle-index) * 161, 100)); /* パーティクルの半径の種を計算 */
+
+        --angle-offset: calc(
+          ((var(--angle-seed) / 360) - 0.5) * 2 * var(--angle-jitter)
+        ); /* パーティクルの角度のオフセットを計算 */
+        --radius-offset: calc(
+          ((var(--radius-seed) / 100) - 0.5) * 2 * var(--radius-jitter)
+        ); /* パーティクルの半径のオフセットを計算 */
+
+        --angle: calc(
+          (var(--particle-index) / var(--particle-count) * 1turn) + var(--angle-offset)
+        ); /* パーティクルの最終的な角度を計算 */
+
+        --eff-initial-r: calc(var(--initial-radius) + var(--radius-offset)); /* パーティクルの初期半径を計算 */
+        --eff-final-r: calc(var(--radius) + var(--radius-offset)); /* パーティクルの最終半径を計算 */
+
+        --initial-x: calc(var(--eff-initial-r) * cos(var(--angle))); /* パーティクルの初期X座標を計算 */
+        --initial-y: calc(var(--eff-initial-r) * sin(var(--angle))); /* パーティクルの初期Y座標を計算 */
+
+        --target-x: calc(var(--eff-final-r) * cos(var(--angle))); /* パーティクルの目標X座標を計算 */
+        --target-y: calc(var(--eff-final-r) * sin(var(--angle))); /* パーティクルの目標Y座標を計算 */
+      }
+
+      circle:nth-child(1) {
+        --particle-index: 1;
+      }
+      circle:nth-child(2) {
+        --particle-index: 2;
+      }
+      circle:nth-child(3) {
+        --particle-index: 3;
+      }
+      circle:nth-child(4) {
+        --particle-index: 4;
+      }
+      circle:nth-child(5) {
+        --particle-index: 5;
+      }
+      circle:nth-child(6) {
+        --particle-index: 6;
+      }
+      circle:nth-child(7) {
+        --particle-index: 7;
+      }
+      circle:nth-child(8) {
+        --particle-index: 8;
+      }
+      circle:nth-child(9) {
+        --particle-index: 9;
+      }
+      circle:nth-child(10) {
+        --particle-index: 10;
+      }
+      circle:nth-child(11) {
+        --particle-index: 11;
+      }
+      circle:nth-child(12) {
+        --particle-index: 12;
+      }
+      circle:nth-child(13) {
+        --particle-index: 13;
+      }
+      circle:nth-child(14) {
+        --particle-index: 14;
+      }
+    }
+  }
+}
+
+@keyframes explosionAnime {
+  0% {
+    opacity: 0;
+    transform: scale(0.01);
+  }
+  1% {
+    opacity: 1;
+    transform: scale(0.01);
+  }
+  5% {
+    stroke-width: 200;
+  }
+  20% {
+    stroke-width: 300;
+  }
+  50% {
+    stroke: #cc8ef5;
+    transform: scale(1.1);
+    stroke-width: 1;
+  }
+  50.1% {
+    stroke-width: 0;
+  }
+  100% {
+    stroke: #cc8ef5;
+    transform: scale(1.1);
+    stroke-width: 0;
+  }
+}
+
+@keyframes particleLayerAnime {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  31% {
+    opacity: 1;
+  }
+  60% {
+    transform: translate(0, 0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+}
+
+/* パーティクルの移動アニメーション */
+@keyframes particleAnimate {
+  0% {
+    transform: translate(var(--initial-x), var(--initial-y));
+  }
+  30% {
+    opacity: 1;
+    transform: translate(var(--initial-x), var(--initial-y));
+  }
+  80% {
+    transform: translate(var(--target-x), var(--target-y));
+  }
+  90% {
+    transform: translate(var(--target-x), var(--target-y));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(var(--target-x), var(--target-y));
+  }
+}
+
+@keyframes heartAnime {
+  0% {
+    transform: scale(0);
+    fill: #e2264d;
+  }
+  39% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+  70% {
+    transform: scale(1, 1) translate(0%, -10%);
+  }
+  75% {
+    transform: scale(1.1, 0.9) translate(0%, 5%);
+  }
+  80% {
+    transform: scale(0.95, 1.05) translate(0%, -3%);
+  }
+  100% {
+    transform: scale(1, 1) translate(0%, 0%);
+    fill: #e2264d;
+  }
+}

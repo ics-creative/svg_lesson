@@ -1,0 +1,5 @@
+@import "./demo2_common.css";
+
+:root {
+  --animate-time: 30000ms;
+}
